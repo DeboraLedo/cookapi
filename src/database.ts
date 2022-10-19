@@ -1,11 +1,16 @@
-/* import mongoose from "mongoose"
+import mongoose from "mongoose";
+
 
 async function connect(){
     try{
-        mongoose.connect();
+       await mongoose.connect("mongodb://localhost/proyectoCeibo");
+       console.log(">>> database connected");
+       
     }
     catch{
-
+         console.log("error")     
     }
 
-} */
+}
+
+export default connect
